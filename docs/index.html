@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libreria Simulazioni - Fisica e Matematica</title>
+    <title>I Miei Artefatti - Fisica, Matematica e Arte</title>
     <style>
         * {
             margin: 0;
@@ -27,7 +27,6 @@
             text-align: center;
             color: white;
             margin-bottom: 50px;
-            animation: slideDown 0.6s ease-out;
         }
         
         header h1 {
@@ -44,7 +43,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-bottom: 40px;
         }
         
         .section {
@@ -52,13 +50,11 @@
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeIn 0.6s ease-out;
+            transition: transform 0.3s;
         }
         
         .section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
         
         .section h2 {
@@ -68,38 +64,44 @@
             padding-bottom: 10px;
         }
         
-        .section ul {
-            list-style: none;
+        .artifact {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 6px;
+            transition: background 0.3s;
         }
         
-        .section li {
-            margin-bottom: 15px;
+        .artifact:hover {
+            background: #e8e9f3;
         }
         
-        .section a {
-            color: #667eea;
+        .artifact-title {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .artifact-emoji {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+        
+        .artifact a {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 15px;
+            background: #667eea;
+            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section a:hover {
-            color: #764ba2;
-            text-decoration: underline;
-        }
-        
-        .section a::before {
-            content: "▶";
-            font-size: 0.8em;
-        }
-        
-        .empty-placeholder {
-            color: #999;
-            font-style: italic;
+            border-radius: 5px;
             font-size: 0.9em;
+            transition: background 0.3s;
+        }
+        
+        .artifact a:hover {
+            background: #764ba2;
         }
         
         footer {
@@ -107,28 +109,6 @@
             color: white;
             margin-top: 50px;
             opacity: 0.8;
-        }
-        
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
         }
         
         @media (max-width: 768px) {
@@ -144,86 +124,79 @@
 <body>
     <div class="container">
         <header>
-            <h1>📚 Simulazioni Interattive</h1>
-            <p>Fisica e Matematica - Libreria Pubblica</p>
+            <h1>📚 I Miei Artefatti</h1>
+            <p>Raccolta di simulazioni interattive, lezioni e strumenti didattici</p>
         </header>
         
         <div class="sections">
-            <!-- CINEMATICA -->
+            <!-- FISICA -->
             <section class="section">
-                <h2>🎬 Cinematica</h2>
-                <ul>
-                    <li><a href="./cinematica/moto-uniforme.html">Moto Uniforme</a></li>
-                    <li><a href="./cinematica/moto-accelerato.html">Moto Uniformemente Accelerato</a></li>
-                    <li><a href="./cinematica/caduta-libera.html">Caduta Libera</a></li>
-                    <li><a href="./cinematica/moto-parabolico.html">Moto Parabolico</a></li>
-                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
-                </ul>
-            </section>
-            
-            <!-- DINAMICA -->
-            <section class="section">
-                <h2>⚡ Dinamica</h2>
-                <ul>
-                    <li><a href="./dinamica/forze.html">Composizione di Forze</a></li>
-                    <li><a href="./dinamica/seconda-legge-newton.html">Seconda Legge di Newton</a></li>
-                    <li><a href="./dinamica/attrito.html">Attrito e Reazioni</a></li>
-                    <li><a href="./dinamica/piano-inclinato.html">Piano Inclinato</a></li>
-                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
-                </ul>
-            </section>
-            
-            <!-- ONDE -->
-            <section class="section">
-                <h2>〰️ Onde e Oscillazioni</h2>
-                <ul>
-                    <li><a href="./onde/moto-armonico.html">Moto Armonico Semplice</a></li>
-                    <li><a href="./onde/pendolo.html">Pendolo</a></li>
-                    <li><a href="./onde/onde-meccaniche.html">Onde Meccaniche</a></li>
-                    <li><a href="./onde/interferenza.html">Interferenza e Diffrazione</a></li>
-                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
-                </ul>
+                <h2>⚡ Fisica</h2>
+                
+                <div class="artifact">
+                    <div class="artifact-title">
+                        <span class="artifact-emoji">🌀</span>Flusso e Circuitazione
+                    </div>
+                    <a href="https://claude.ai/code/artifact/bca1101c-c7ea-4421-99cd-bb6889285d22" target="_blank">Accedi →</a>
+                </div>
+                
+                <div class="artifact">
+                    <div class="artifact-title">
+                        <span class="artifact-emoji">📐</span>Lezione su Flusso e Circuitazione
+                    </div>
+                    <a href="https://claude.ai/code/artifact/441b930b-f463-4958-8e1a-9e5d48816ff0" target="_blank">Accedi →</a>
+                </div>
+                
+                <div class="artifact">
+                    <div class="artifact-title">
+                        <span class="artifact-emoji">🧪</span>Laboratorio Flusso e Circuitazione
+                    </div>
+                    <a href="https://claude.ai/code/artifact/4fc23e2f-8f37-432e-8c39-181a9c9683b5" target="_blank">Accedi →</a>
+                </div>
+                
+                <div class="artifact">
+                    <div class="artifact-title">
+                        <span class="artifact-emoji">⏱🛸</span>Relatività della Simultaneità
+                    </div>
+                    <a href="https://claude.ai/code/artifact/e57760f6-9eda-4684-a0e4-c23fa5ba66b5" target="_blank">Accedi →</a>
+                </div>
             </section>
             
             <!-- TERMODINAMICA -->
             <section class="section">
                 <h2>🔥 Termodinamica</h2>
-                <ul>
-                    <li><a href="./termodinamica/gas-ideale.html">Gas Ideale</a></li>
-                    <li><a href="./termodinamica/calore-temperatura.html">Calore e Temperatura</a></li>
-                    <li><a href="./termodinamica/primo-principio.html">Primo Principio</a></li>
-                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
-                </ul>
+                
+                <div class="artifact">
+                    <div class="artifact-title">
+                        <span class="artifact-emoji">🌡️</span>Primo Principio nel Piano di Clapeyron
+                    </div>
+                    <a href="https://claude.ai/code/artifact/e5ee13dd-c5dd-47d6-8250-de663aed5729" target="_blank">Accedi →</a>
+                </div>
             </section>
             
-            <!-- ELETTROMAGNETISMO -->
+            <!-- STORIA E ARTE -->
             <section class="section">
-                <h2>⚛️ Elettromagnetismo</h2>
-                <ul>
-                    <li><a href="./elettromagnetismo/campo-elettrico.html">Campo Elettrico</a></li>
-                    <li><a href="./elettromagnetismo/circuiti.html">Circuiti Elettrici</a></li>
-                    <li><a href="./elettromagnetismo/campo-magnetico.html">Campo Magnetico</a></li>
-                    <li><a href="./elettromagnetismo/induzione.html">Induzione Elettromagnetica</a></li>
-                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
-                </ul>
-            </section>
-            
-            <!-- MATEMATICA -->
-            <section class="section">
-                <h2>📐 Matematica</h2>
-                <ul>
-                    <li><a href="./matematica/funzioni.html">Funzioni Trigonometriche</a></li>
-                    <li><a href="./matematica/geometria.html">Geometria Dinamica</a></li>
-                    <li><a href="./matematica/derivate.html">Derivate e Integrali</a></li>
-                    <li><a href="./matematica/vettori.html">Vettori</a></li>
-                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
-                </ul>
+                <h2>🎨 Storia e Arte</h2>
+                
+                <div class="artifact">
+                    <div class="artifact-title">
+                        <span class="artifact-emoji">🎨</span>Galleria - Flashcards Storia dell'Arte
+                    </div>
+                    <a href="https://claude.ai/code/artifact/a6a9e211-4c2e-450d-865a-1b50224df8fd" target="_blank">Accedi →</a>
+                </div>
+                
+                <div class="artifact">
+                    <div class="artifact-title">
+                        <span class="artifact-emoji">🏛️</span>Architettura - Flashcards
+                    </div>
+                    <a href="https://claude.ai/code/artifact/21484b22-0407-4af7-a2cc-93a5e303a42e" target="_blank">Accedi →</a>
+                </div>
             </section>
         </div>
         
         <footer>
-            <p>📖 Libreria di simulazioni interattive per uso didattico</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Accesso pubblico • Nessun login richiesto</p>
+            <p>✨ Accesso pubblico a tutti gli artefatti</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Condividibile da qualsiasi dispositivo, nessun login richiesto</p>
         </footer>
     </div>
 </body>
