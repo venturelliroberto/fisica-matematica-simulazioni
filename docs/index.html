@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Miei Artefatti - Fisica, Matematica e Arte</title>
+    <title>Simulazioni Interattive - Fisica</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +19,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
         }
         
@@ -41,66 +41,52 @@
         
         .sections {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
         
         .section {
             background: white;
             border-radius: 12px;
-            padding: 30px;
+            padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
+            text-align: center;
         }
         
         .section:hover {
             transform: translateY(-5px);
         }
         
+        .section-emoji {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
         .section h2 {
             color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .section p {
+            color: #666;
             margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
+            font-size: 0.95em;
         }
         
-        .artifact {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            border-radius: 6px;
-            transition: background 0.3s;
-        }
-        
-        .artifact:hover {
-            background: #e8e9f3;
-        }
-        
-        .artifact-title {
-            font-size: 1em;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .artifact-emoji {
-            font-size: 1.3em;
-            margin-right: 8px;
-        }
-        
-        .artifact a {
+        .btn {
             display: inline-block;
-            margin-top: 8px;
-            padding: 8px 15px;
+            padding: 12px 30px;
             background: #667eea;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.9em;
+            border-radius: 6px;
+            font-weight: 600;
             transition: background 0.3s;
         }
         
-        .artifact a:hover {
+        .btn:hover {
             background: #764ba2;
         }
         
@@ -124,79 +110,31 @@
 <body>
     <div class="container">
         <header>
-            <h1>📚 I Miei Artefatti</h1>
-            <p>Raccolta di simulazioni interattive, lezioni e strumenti didattici</p>
+            <h1>🔬 Simulazioni Interattive</h1>
+            <p>Laboratori e strumenti didattici di Fisica</p>
         </header>
         
         <div class="sections">
-            <!-- FISICA -->
+            <!-- LABORATORIO FLUSSO E CIRCUITAZIONE -->
             <section class="section">
-                <h2>⚡ Fisica</h2>
-                
-                <div class="artifact">
-                    <div class="artifact-title">
-                        <span class="artifact-emoji">🌀</span>Flusso e Circuitazione
-                    </div>
-                    <a href="https://claude.ai/code/artifact/bca1101c-c7ea-4421-99cd-bb6889285d22" target="_blank">Accedi →</a>
-                </div>
-                
-                <div class="artifact">
-                    <div class="artifact-title">
-                        <span class="artifact-emoji">📐</span>Lezione su Flusso e Circuitazione
-                    </div>
-                    <a href="https://claude.ai/code/artifact/441b930b-f463-4958-8e1a-9e5d48816ff0" target="_blank">Accedi →</a>
-                </div>
-                
-                <div class="artifact">
-                    <div class="artifact-title">
-                        <span class="artifact-emoji">🧪</span>Laboratorio Flusso e Circuitazione
-                    </div>
-                    <a href="https://claude.ai/code/artifact/4fc23e2f-8f37-432e-8c39-181a9c9683b5" target="_blank">Accedi →</a>
-                </div>
-                
-                <div class="artifact">
-                    <div class="artifact-title">
-                        <span class="artifact-emoji">⏱🛸</span>Relatività della Simultaneità
-                    </div>
-                    <a href="https://claude.ai/code/artifact/e57760f6-9eda-4684-a0e4-c23fa5ba66b5" target="_blank">Accedi →</a>
-                </div>
+                <div class="section-emoji">🧪</div>
+                <h2>Laboratorio Flusso e Circuitazione</h2>
+                <p>Simulazione interattiva per esplorare i concetti di flusso e circuitazione dei campi vettoriali.</p>
+                <a href="https://claude.ai/code/artifact/4fc23e2f-8f37-432e-8c39-181a9c9683b5" class="btn" target="_blank">Accedi al laboratorio →</a>
             </section>
             
-            <!-- TERMODINAMICA -->
+            <!-- PRIMO PRINCIPIO DELLA TERMODINAMICA -->
             <section class="section">
-                <h2>🔥 Termodinamica</h2>
-                
-                <div class="artifact">
-                    <div class="artifact-title">
-                        <span class="artifact-emoji">🌡️</span>Primo Principio nel Piano di Clapeyron
-                    </div>
-                    <a href="https://claude.ai/code/artifact/e5ee13dd-c5dd-47d6-8250-de663aed5729" target="_blank">Accedi →</a>
-                </div>
-            </section>
-            
-            <!-- STORIA E ARTE -->
-            <section class="section">
-                <h2>🎨 Storia e Arte</h2>
-                
-                <div class="artifact">
-                    <div class="artifact-title">
-                        <span class="artifact-emoji">🎨</span>Galleria - Flashcards Storia dell'Arte
-                    </div>
-                    <a href="https://claude.ai/code/artifact/a6a9e211-4c2e-450d-865a-1b50224df8fd" target="_blank">Accedi →</a>
-                </div>
-                
-                <div class="artifact">
-                    <div class="artifact-title">
-                        <span class="artifact-emoji">🏛️</span>Architettura - Flashcards
-                    </div>
-                    <a href="https://claude.ai/code/artifact/21484b22-0407-4af7-a2cc-93a5e303a42e" target="_blank">Accedi →</a>
-                </div>
+                <div class="section-emoji">🌡️</div>
+                <h2>Primo Principio nel Piano di Clapeyron</h2>
+                <p>Esplorazione interattiva del primo principio della termodinamica nel piano P-V.</p>
+                <a href="https://claude.ai/code/artifact/e5ee13dd-c5dd-47d6-8250-de663aed5729" class="btn" target="_blank">Accedi alla simulazione →</a>
             </section>
         </div>
         
         <footer>
-            <p>✨ Accesso pubblico a tutti gli artefatti</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Condividibile da qualsiasi dispositivo, nessun login richiesto</p>
+            <p>✨ Accesso pubblico gratuito • Nessun login richiesto</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Condivisibile da qualsiasi dispositivo</p>
         </footer>
     </div>
 </body>
