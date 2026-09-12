@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria Simulazioni - Fisica e Matematica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .section ul {
+            list-style: none;
+        }
+        
+        .section li {
+            margin-bottom: 15px;
+        }
+        
+        .section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        .section a::before {
+            content: "▶";
+            font-size: 0.8em;
+        }
+        
+        .empty-placeholder {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            opacity: 0.8;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .sections {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Simulazioni Interattive</h1>
+            <p>Fisica e Matematica - Libreria Pubblica</p>
+        </header>
+        
+        <div class="sections">
+            <!-- CINEMATICA -->
+            <section class="section">
+                <h2>🎬 Cinematica</h2>
+                <ul>
+                    <li><a href="./cinematica/moto-uniforme.html">Moto Uniforme</a></li>
+                    <li><a href="./cinematica/moto-accelerato.html">Moto Uniformemente Accelerato</a></li>
+                    <li><a href="./cinematica/caduta-libera.html">Caduta Libera</a></li>
+                    <li><a href="./cinematica/moto-parabolico.html">Moto Parabolico</a></li>
+                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
+                </ul>
+            </section>
+            
+            <!-- DINAMICA -->
+            <section class="section">
+                <h2>⚡ Dinamica</h2>
+                <ul>
+                    <li><a href="./dinamica/forze.html">Composizione di Forze</a></li>
+                    <li><a href="./dinamica/seconda-legge-newton.html">Seconda Legge di Newton</a></li>
+                    <li><a href="./dinamica/attrito.html">Attrito e Reazioni</a></li>
+                    <li><a href="./dinamica/piano-inclinato.html">Piano Inclinato</a></li>
+                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
+                </ul>
+            </section>
+            
+            <!-- ONDE -->
+            <section class="section">
+                <h2>〰️ Onde e Oscillazioni</h2>
+                <ul>
+                    <li><a href="./onde/moto-armonico.html">Moto Armonico Semplice</a></li>
+                    <li><a href="./onde/pendolo.html">Pendolo</a></li>
+                    <li><a href="./onde/onde-meccaniche.html">Onde Meccaniche</a></li>
+                    <li><a href="./onde/interferenza.html">Interferenza e Diffrazione</a></li>
+                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
+                </ul>
+            </section>
+            
+            <!-- TERMODINAMICA -->
+            <section class="section">
+                <h2>🔥 Termodinamica</h2>
+                <ul>
+                    <li><a href="./termodinamica/gas-ideale.html">Gas Ideale</a></li>
+                    <li><a href="./termodinamica/calore-temperatura.html">Calore e Temperatura</a></li>
+                    <li><a href="./termodinamica/primo-principio.html">Primo Principio</a></li>
+                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
+                </ul>
+            </section>
+            
+            <!-- ELETTROMAGNETISMO -->
+            <section class="section">
+                <h2>⚛️ Elettromagnetismo</h2>
+                <ul>
+                    <li><a href="./elettromagnetismo/campo-elettrico.html">Campo Elettrico</a></li>
+                    <li><a href="./elettromagnetismo/circuiti.html">Circuiti Elettrici</a></li>
+                    <li><a href="./elettromagnetismo/campo-magnetico.html">Campo Magnetico</a></li>
+                    <li><a href="./elettromagnetismo/induzione.html">Induzione Elettromagnetica</a></li>
+                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
+                </ul>
+            </section>
+            
+            <!-- MATEMATICA -->
+            <section class="section">
+                <h2>📐 Matematica</h2>
+                <ul>
+                    <li><a href="./matematica/funzioni.html">Funzioni Trigonometriche</a></li>
+                    <li><a href="./matematica/geometria.html">Geometria Dinamica</a></li>
+                    <li><a href="./matematica/derivate.html">Derivate e Integrali</a></li>
+                    <li><a href="./matematica/vettori.html">Vettori</a></li>
+                    <li class="empty-placeholder">+ Aggiungi altre simulazioni...</li>
+                </ul>
+            </section>
+        </div>
+        
+        <footer>
+            <p>📖 Libreria di simulazioni interattive per uso didattico</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Accesso pubblico • Nessun login richiesto</p>
+        </footer>
+    </div>
+</body>
+</html>
